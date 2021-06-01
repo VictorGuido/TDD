@@ -93,7 +93,7 @@ public class myTests {
         List<Integer> list = new ArrayList<>();
         list.add(1);
         //check size of list to see if really added that element
-        assertEquals(0, list.size());
+        assertEquals(1, list.size());
     }
 
     @Test
@@ -121,7 +121,7 @@ public class myTests {
         //create a list
         List<Integer> list = new ArrayList<>();
         //check for an element in a empty list
-        assertTrue(list.contains(0));
+        assertTrue(!list.contains(0));
     }
 
     @Test
@@ -184,7 +184,7 @@ public class myTests {
         //create empty list
         List<Integer> list = new ArrayList<>();
         //check if first element of list is '2'
-        assertEquals(2,list.indexOf(0));
+        assertEquals(-1,list.indexOf(0));
     }
 
     @Test
@@ -233,7 +233,7 @@ public class myTests {
         //check size of list when deleted element
         assertEquals(3, list.size());
         //check index of list where used to be removed element
-        assertEquals(1,(int) list.indexOf(3));
+        assertEquals(-1,(int) list.indexOf(3));
     }
 
     @Test(expected = NullPointerException.class)
